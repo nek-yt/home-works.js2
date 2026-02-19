@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <form class="addForm" action="">
+        <input type="text" name="name" id="name" placeholder="Enter name">
+        <select name="status" id="status">
+        <option value="true">Active</option>
+        <option value="false">Inactive</option>
+        </select>
+        <button class="submit">Add User</button>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody class="box"></tbody>
+    </table>
+    <script src="main.js"></script>
+</body>
+</html>
