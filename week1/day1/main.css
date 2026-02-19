@@ -1,0 +1,27 @@
+
+.d1 {
+    position: absolute;
+    top: 130px;
+    left: 645px;
+}
+.d2 {
+    position: absolute;
+    top: 310px;
+    left: 620px;
+}
+.c1 {
+    position: absolute;
+    left: 495px;
+    top: 570px;
+    z-index: -1;
+}
+.c2 {
+    position: absolute;
+    left: 835px;
+    top: 30px;
+    z-index: -1;
+}
+.img {
+    position: relative;
+    z-index: 1;
+}
