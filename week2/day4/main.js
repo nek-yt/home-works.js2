@@ -15,6 +15,7 @@ async function getUser() {
         console.error(error);
     }
 }
+
 async function deleteUI(id) {
     try {
         await axios.delete(`${api}/${id}`)
@@ -23,6 +24,7 @@ async function deleteUI(id) {
         console.error(error);
     }
 }
+
 async function editUI(user) {
   try {
     await axios.put(`${api}/${idx}`, user)
@@ -31,6 +33,7 @@ async function editUI(user) {
     console.error(error);
   }
 }
+
 async function addUI(user) {
   try {
     await axios.post(api, user)
@@ -39,12 +42,14 @@ async function addUI(user) {
     console.error(error);
   }
 }
+
 function editUsers(e) {
     dailog.show()
   idx = e.id
   form["name"].value = e.name
   form["job"].value = e.job
 }
+
 form.onsubmit = (event) => {
     event.preventDefault()
     let obj = {
@@ -59,6 +64,7 @@ form.onsubmit = (event) => {
 x.onclick = () => {
     dailog.close()
 }
+
 addU.onclick = () => {
     dailog.show()
     form.onsubmit = (event) => {
@@ -100,3 +106,18 @@ function showUser(users) {
     })
 }
 getUser()
+
+
+    //     form.onsubmit = (e) => {
+    //     e.preventDefault()
+    //     let obj = {
+    //         profile: form["profile"].value,
+    //         name: form["name"].value,
+    //         date: form["date"].value,
+    //         role: form["role"].value,
+    //         status: form["status"].value == "Active" ? true : false
+    //     }
+    //     form.reset()
+    //     addUser(obj)
+    //     dialog.close()
+    // }

@@ -1,0 +1,19 @@
+.addUser {
+    width: 200px;
+    height: 30px;
+    background-color: white;
+}
+.div {
+    background-color: rgb(125, 125, 253);
+    display: flex;
+    align-items: center;
+    font-family: sans-serif;
+    color: white;
+    gap: 900px;
+    padding: 5px 5px;
+}
+table {
+    width: 100%;
+    margin: 10px 10px;
+    font-family: sans-serif;
+}
