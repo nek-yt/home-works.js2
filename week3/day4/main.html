@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALIEXPRESS computer shop</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <h1 class="s">Product List  ¯\_(ツ)_/¯</h1>
+    <div class="cont">
+        <input type="text" placeholder="search" class="inp1">
+        <div class="">
+            <button class="sort">Sort by (product details)</button>
+            <button class="btnEA">+ Add user</button>
+        </div>
+    </div>
+    <dialog class="dialog">
+        <form action="" class="form">
+            <input type="text" placeholder="IMG URL" name="img" required>
+            <input type="text" placeholder="NAME OF PRODUCT" name="name" required>
+            <input type="text" placeholder="CATEGORIES" name="cat" required>
+            <input type="number" placeholder="PRICE" name="price" required>
+            <input type="number" placeholder="QTY" name="qty" required>
+            <select name="status" id="status">
+                <option value="Active">Active</option>
+                <option value="Inactive">Inactive</option>
+            </select>
+            <button class="addBtn">add</button>
+            <button class="x">x</button>
+        </form>
+    </dialog>
+    <table>
+        <thead>
+            <tr>
+                <td>
+                    <input type="checkbox" name="check" id="check">
+                </td>
+                <td>#</td>
+                <td>PRODUCT DETAILS</td>
+                <td>CATEGORIES</td>
+                <td>PRICE</td>
+                <td>QTY</td>
+                <td>STATUS</td>
+                <td>ACTION</td>
+            </tr>
+        </thead>
+        <tbody class="box"></tbody>
+    </table>
+    <script src="./main.js"></script>
+</body>
+</html>

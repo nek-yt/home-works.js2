@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <button class="addu">Add user</button>
+    <dialog class="d">
+        <form class="form">
+            <input type="text" name="profile">
+            <input type="text" name="name">
+            <input type="text" name="job">
+            <input type="text" name="salary">
+            <select name="stat" id="stat">
+                <option value="active">Active</option>
+                <option value="inactive">Inactive</option>
+            </select>
+            <button class="aBtn">Add</button>
+            <button class="x">x</button>
+        </form>
+    </dialog>
+    <dialog class="editD">
+        <form class="formD">
+            <input type="text" name="profileD">
+            <input type="text" name="nameD">
+            <input type="text" name="jobD">
+            <input type="text" name="salaryD">
+            <select name="statD" id="statD">
+                <option value="active">Active</option>
+                <option value="inactive">Inactive</option>
+            </select>
+            <button class="eBtn">Add</button>
+            <button class="x">x</button>
+        </form>
+    </dialog>
+
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Profile</th>
+                <th>Name</th>
+                <th>Job</th>
+                <th>Salary</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody class="box"></tbody>
+    </table>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>

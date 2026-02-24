@@ -53,7 +53,7 @@ function editUI(e) {
      form["name"].value = e.name
      form["date"].value = e.date
      form["role"].value = e.role
-     form["status"].checked = stat.value == "Active" ? true : false
+     form["status"].checked = e.status
 }
 form.onsubmit = (e) => {
     e.preventDefault()
@@ -85,6 +85,7 @@ btnAdd.onclick = () => {
             date: aform["datea"].value,
             role: aform["rolea"].value,
             status: aform["statusa"].checked
+            status: aform["statusa"].checked
         }
     aform.reset()
     addUser(obj)
@@ -107,6 +108,9 @@ function showUser(user) {
         let btnE = document.createElement("button")
         let btnD = document.createElement("button")
         let btnAct = document.createElement("td")
+        let checkbox = document.createElement("input")
+        checkbox.type = "checkbox"
+        checkbox.checked = e.status
 
         btnE.innerText = "Edit"
         btnD.innerText = "Delete"
@@ -133,7 +137,14 @@ function showUser(user) {
         tdDate.innerText = e.date
         tdRole.innerText = e.role
         tdStatus.innerText = e.status ? "Active" : "Inactive"
+        tdStatus.innerText = checkbox.checked ? "Active" : "Inactive"
 
+        checkbox.onchange = () => {
+            e.status = checkbox.checked
+            tdStatus.innerText = checkbox.checked ? "Active" : "Inactive"
+        }
+
+        tdStatus.append(checkbox)
         btnAct.append(btnE, btnD)
         tr.append(tdId, tdPic2, tdName, tdDate, tdRole, tdStatus, btnAct)
         box.append(tr)
