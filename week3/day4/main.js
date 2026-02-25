@@ -49,14 +49,14 @@ async function editUser(user) {
     }
 }
 
-async function addUser(user) {
+async function addUser(id) {
     try {
         await fetch(api, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(user)
+            body: JSON.stringify(id)
         })
         getUser()
     } catch (error) {
@@ -122,7 +122,22 @@ function showUser(user) {
         check.type = "checkbox";
 
         btnD.innerText = "Delete";
-        btnE.innerText = "Edit";  
+        btnE.innerText = "Edit";
+
+
+        btnD.style.color = "black"; 
+        btnD.style.backgroundColor = "red";
+        btnD.style.marginRight = "5px";
+        btnD.style.border = "none";
+        btnD.style.padding = "5px 10px";
+        btnD.style.borderRadius = "5px"
+
+        btnE.style.color = "black";
+        btnE.style.backgroundColor = "yellow";
+        btnE.style.border = "none";
+        btnE.style.padding = "5px 10px";
+        btnE.style.borderRadius = "5px"
+
         img.src = e.img;
         tdImg.append(img);
         tdName.innerText = e.name;
